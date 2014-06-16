@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    Options -MultiViews
+
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^public($|/) - [L]
+    RewriteRule ^config - [L,R=404]
+    RewriteRule ^schema.sql - [L,R=404]
+    RewriteRule ^ application.php [QSA,L]
+</IfModule>

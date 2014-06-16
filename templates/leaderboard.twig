@@ -1,0 +1,30 @@
+{% extends "application.twig" %}
+
+{%block title%}
+	Donations leaderboard
+{%endblock%}
+
+{%block content%}
+<table style="width: 100%">
+	<colgroup>
+		<col width="30%">
+		<col width="20%" style="text-align: center">
+		<col width="50%">
+	</colgroup>
+	<tr>
+		<th>Techbiker</th>
+		<th>Amount</th>
+		<th>Goal</th>
+	</tr>
+	{%for techbiker in techbikers%}
+	<tr>
+		<td><strong>{{techbiker.name}}</strong></td>
+		<td>{{techbiker.amount|number_format(2)}}€</td>
+		<td><p class="meter">
+			<span class="label">{{techbiker.percentage|number_format(0)}}%</span>
+			<span class="indicator" style="width: {{techbiker.percentage}}%"></span>
+		</p></td>
+	</tr>
+	{%endfor%}
+</table>
+{%endblock%}

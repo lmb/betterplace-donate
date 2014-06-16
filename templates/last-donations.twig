@@ -1,0 +1,38 @@
+{% extends "application.twig" %}
+
+{%block title%}
+	{%if user is defined %}
+		All donations for {{user}}
+	{% else %}
+		Overall donations
+	{% endif %}
+{%endblock%}
+
+{%block content%}
+<p class="meter">
+	<span class="label">{{current|number_format(2)}}€ raised so far</span>
+	<span class="indicator" style="width: {{ratio}}%"></span>
+</p>
+{% if not user is defined %}
+<p><small>Please note: the % value will fluctuate as new riders join us!</small></p>
+{% endif %}
+{% if donations %}
+<table style="width: 100%">
+	<colgroup>
+	  <col width="30%">
+	  <col width="20%" style="text-aling: center">
+	  <col width="50%">
+	</colgroup>
+	<tr>
+		<th>Amount</th>
+		<th>Donated on</th>
+	</tr>
+	{%for donation in donations%}
+	<tr>
+		<td>{{donation.amount}}€</td>
+		<td>{{donation.created|date("G:i, d/m/Y")}}</td>
+	</tr>
+	{%endfor%}
+</table>
+{% endif %}
+{%endblock%}

@@ -1,0 +1,12 @@
+<?php
+
+return array(
+    'debug' => false,
+    'db.options' => array(
+        'driver' => 'pdo_mysql',
+        'dbname' => 'production',
+        'host' => 'localhost',
+        'user' => 'root',
+        'password' => ''
+    )
+);

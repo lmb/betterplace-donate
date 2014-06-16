@@ -1,0 +1,14 @@
+<?php
+
+return array(
+	'per_rider_amount' => 750,
+	'betterplace.url' =>
+		'https://www.betterplace.org/de/projects/{{project_id}}/client_donations/new'.
+		'?client_id={{client_id}}'.
+		'&donation_presenter%5Bdonation_amount%5D={{donation_amount}}'.
+		'&donation_presenter%5Bdonation_client_reference%5D={{client_reference}}',
+
+	'betterplace.secret' => '',     // Change to random string
+	'betterplace.project_id' => -1, // Change to project id
+	'betterplace.client_id' => ''   // Change to Betterplace client id
+);

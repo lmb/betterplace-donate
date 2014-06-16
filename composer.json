@@ -1,0 +1,19 @@
+{
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/igorw/ConfigServiceProvider"
+		}
+	],
+	"require": {
+		"silex/silex": "1.0.*@dev",
+		"twig/twig": "1.*",
+		"symfony/config": "~2.3",
+		"symfony/translation": "~2.3",
+		"symfony/twig-bridge": "~2.3",
+		"symfony/locale": "~2.3",
+		"doctrine/dbal": "2.2.*",
+		"symfony/icu": "1.1.*",
+		"igorw/config-service-provider": "~1.2"
+	}
+}

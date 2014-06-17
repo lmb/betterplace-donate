@@ -81,6 +81,7 @@ $app->get('/you/{token}', function ($token) use($app) {
 
     return $app->render('last-donations.twig', array(
         'user' => $user,
+        'token' => $token,
         'donations' => $donations,
         'num_donations' => count($donations),
         'current' => $current,

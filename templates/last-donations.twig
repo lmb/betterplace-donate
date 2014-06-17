@@ -13,7 +13,9 @@
 	<span class="label">{{current|number_format(2)}}€ raised so far</span>
 	<span class="indicator" style="width: {{ratio}}%"></span>
 </p>
-{% if not user is defined %}
+{% if user is defined %}
+<p>Please send <a href="{{ url('donate', {'token': token}) }}">{{ url('donate', {'token': token}) }}</a> to your friends, family and colleagues raise your funds.</p>
+{% else %}
 <p><small>Please note: the % value will fluctuate as new riders join us!</small></p>
 {% endif %}
 {% if donations %}
